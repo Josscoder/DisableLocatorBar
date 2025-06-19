@@ -1,0 +1,6 @@
+name: DisableLocateBar
+main: Josscoder\DisableLocateBar\DisableLocateBarPlugin
+authors:
+  - Josscoder
+version: 1.0.0-ALPHA
+api: 5.28.2

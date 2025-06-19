@@ -1,0 +1,36 @@
+{
+    "name": "josscoder/disable-locate-bar",
+    "type": "pocketmine-plugin",
+    "autoload": {
+        "psr-4": {
+            "Josscoder\\DisableLocateBar\\": "/src/Josscoder/DisableLocateBar"
+        }
+    },
+    "authors": [
+        {
+            "name": "Josscoder",
+            "email": "josscoder@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:Josscoder/UltraCitizens.git"
+        }
+    ],
+    "require-dev": {
+        "pocketmine/pocketmine-mp": "^5.0.0",
+        "sof3/pharynx": "dev-master",
+        "phpstan/phpstan": "1.12.7"
+    },
+    "scripts": {
+        "lint": [
+            "./vendor/bin/phpstan analyse --no-progress"
+        ],
+        "build": [
+            "composer lint",
+            "@php -dphar.readonly=0 ./vendor/bin/pharynx -i . -c -p=DisableLocateBar.phar"
+        ]
+    }
+}
