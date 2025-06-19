@@ -3,7 +3,7 @@
     "type": "pocketmine-plugin",
     "autoload": {
         "psr-4": {
-            "Josscoder\\DisableLocateBar\\": "/src/Josscoder/DisableLocateBar"
+            "Josscoder\\DisableLocatorBar\\": "/src/Josscoder/DisableLocatorBar"
         }
     },
     "authors": [
@@ -30,7 +30,7 @@
         ],
         "build": [
             "composer lint",
-            "@php -dphar.readonly=0 ./vendor/bin/pharynx -i . -c -p=DisableLocateBar.phar"
+            "@php -dphar.readonly=0 ./vendor/bin/pharynx -i . -c -p=DisableLocatorBar.phar"
         ]
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Josscoder\DisableLocateBar;
+namespace Josscoder\DisableLocatorBar;
 
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
@@ -8,7 +8,7 @@ use pocketmine\network\mcpe\protocol\GameRulesChangedPacket;
 use pocketmine\network\mcpe\protocol\types\BoolGameRule;
 use pocketmine\plugin\PluginBase;
 
-class DisableLocateBarPlugin extends PluginBase implements Listener
+class DisableLocatorBarPlugin extends PluginBase implements Listener
 {
     protected function onEnable(): void
     {
@@ -19,7 +19,7 @@ class DisableLocateBarPlugin extends PluginBase implements Listener
     {
         $packet = GameRulesChangedPacket::create(
             [
-                "locatorBar" => new BoolGameRule(false, false)
+                'locatorBar' => new BoolGameRule(false, false)
             ]
         );
 

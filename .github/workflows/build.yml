@@ -65,7 +65,7 @@ jobs:
         run: ./bin/php7/bin/php composer.phar install --prefer-dist --no-interaction --ignore-platform-req=ext-iconv
 
       - name: Run Build
-        run: ./bin/php7/bin/php -dphar.readonly=0 vendor/bin/pharynx -i . -c -p=DisableLocateBar.phar
+        run: ./bin/php7/bin/php -dphar.readonly=0 vendor/bin/pharynx -i . -c -p=DisableLocatorBar.phar
 
       - name: Get plugin.yml information
         run: |
@@ -81,7 +81,7 @@ jobs:
       - name: Create Release
         uses: ncipollo/release-action@v1.14.0
         with:
-          artifacts: ${{ github.workspace }}/DisableLocateBar.phar
+          artifacts: ${{ github.workspace }}/DisableLocatorBar.phar
           draft: false
           name: ${{ env.PLUGIN_NAME }} v${{ env.PLUGIN_VERSION }} Release
           tag: v${{ env.PLUGIN_VERSION }}
