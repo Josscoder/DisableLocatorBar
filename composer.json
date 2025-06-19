@@ -1,5 +1,5 @@
 {
-    "name": "josscoder/disable-locate-bar",
+    "name": "josscoder/disable-locator-bar",
     "type": "pocketmine-plugin",
     "autoload": {
         "psr-4": {
